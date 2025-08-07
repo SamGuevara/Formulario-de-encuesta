@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Encuesta de Satisfacción</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="encuesta.php" method="POST" class="encuesta">
+            <div class="encabezado">
+                <h3>Encuesta de satisfacción</h3>
+                <p>Tu opinión nos ayuda a mejorar.</p>
+            </div>
+            <fieldset class="clasificacion">
+                <legend>En general, ¿Qué tan satisfecho estás con nuestro servicio?</legend>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Excelente">☆</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Bueno">☆</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Regular">☆</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Malo">☆</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Muy malo">☆</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="clasificacion">
+                <legend>¿Qué fue lo que más te gustó? (Selecciona todo lo que aplique)</legend>
+                <div class="checkbox">
+                    <input type="checkbox" id="calidad" name="gustos[]" value="calidad">
+                    <label for="calidad">La calidad del producto</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="precio" name="gustos[]" value="precio">
+                    <label for="precio">El precio</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="atencion" name="gustos[]" value="atencion">
+                    <label for="atencion">La atención al cliente</label>
+                </div>
+                 <div class="checkbox">
+                    <input type="checkbox" id="envio" name="gustos[]" value="envio">
+                    <label for="envio">La velocidad de envío</label>
+                </div>
+            </fieldset>
+
+            <div class="clasificacion">
+                <label for="comments">¿Tienes alguna sugerencia para nosotros?</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="boton-subir">Enviar Opinión</button>
+        </form>
+    </div>
+</body>
+</html>
